@@ -1,20 +1,28 @@
 package com.tatvasoftassignment.cleandemo1.domain;
 
+
+import android.content.Context;
+
 import androidx.lifecycle.MutableLiveData;
 
 import com.tatvasoftassignment.cleandemo1.data.repository.CallBackTwoRepository;
 
-public class CallBackTwoImpl implements  CallBackTwo{
+public class CallBackTwoImpl implements CallBackTwo {
 
-    private CallBackTwoRepository callBackTwoRepository;
-    private MutableLiveData<String> data;
-    public CallBackTwoImpl(){
-        callBackTwoRepository = new CallBackTwoRepository();
+    private final CallBackTwoRepository callBackTwoRepository;
+
+    Context context;
+
+    public CallBackTwoImpl(Context context) {
+        this.context = context;
+        callBackTwoRepository = new CallBackTwoRepository(context);
     }
+
     @Override
     public MutableLiveData<String> getData() {
 
-       data = callBackTwoRepository.getData();
-        return data;
+        return callBackTwoRepository.getData();
     }
+
+
 }

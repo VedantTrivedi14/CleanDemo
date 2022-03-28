@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">CleanDemo1</string>
     <string name="submit">submit</string>
+    <string name="call">call</string>
+    <string name="value_is">"value is "</string>
+    <string name="user_name">user name</string>
+    <string name="vedant">Vedant</string>
+    <string name="massage">This is second approach</string>
+    <string name="massage2">This is callback</string>
+    <string name="error">error</string>
 </resources>
